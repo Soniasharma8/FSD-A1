@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+h1 {
+    text-align: center;
+}
+.scene-summary {
+    margin-bottom: 20px;
+}
+.stage-directions {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.speaker {
+    font-weight: bold;
+}
