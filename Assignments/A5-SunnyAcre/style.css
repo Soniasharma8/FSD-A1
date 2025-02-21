@@ -1,17 +1,56 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
 
+
+    body {
+    font-family: sans-serif; /* Added a default font */
+    margin: 0; /* Remove default body margin */
+}
 .container {
-    max-width: 960px;
-    margin: 20px auto;
+    max-width: 960px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the content */
     padding: 20px;
 }
-
 .header {
-    text-align: ;
+    display: flex;
+    align-items: center; /* Vertically align items */
     margin-bottom: 20px;
+}
+.header img {
+    max-width: 150px; /* Adjust image size as needed */
+    margin-right: 20px;
+}
+.contact-info {
+    margin-bottom: 20px;
+}
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make list items horizontal */
+    justify-content: center; /* Center the navigation items */
+}
+nav li {
+    margin: 0 10px; /* Add spacing between list items */
+}
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Set link color */
+}
+h2 {
+   margin-top: 20px; /* Add space above h2 elements */
+}
+img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+    display: block; /* Prevent image from affecting text flow */
+    margin: 20px auto; /* Center the image */
+}
+p {
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+footer { /* Style the footer */
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Add a background color */
+    margin-top: 20px;
 }
