@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(186, 228, 228);
+    background-image: url(images/good.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.border {
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+   margin: 55px 100px 0px 100px;
+   background-color:blanchedalmond;
+}
+
+.topnav {
+    margin-left: 20%;
+}
+
+h1 {
+    color: brown;
+    margin-left: 20%;
+}
+
+#heading {
+    border-style: inset;
+}
