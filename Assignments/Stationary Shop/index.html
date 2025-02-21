@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationary Shop</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <!-- <h1>Stationary Shop</h1>
+    <div>
+        <input type="checkbox" id="stationary" name="stationary" value="pen">
+        <label for="stationary">Pen</label>
+    </div>
+    <div>
+        <input type="checkbox" id="stationary1" name="stationary1" value="pencil">
+        <label for="stationary1">Pencil</label>
+    </div>
+    <div>
+        <input type="checkbox" id="stationary2" name="stationary2" value="eraser">
+        <label for="stationary2">Eraser</label>
+    </div>
+    <div>
+        <input type="checkbox" id="stationary3" name="stationary3" value="notebook">
+        <label for="stationary">Notebook</label>
+    </div> -->
+
+    <h1>Stationary Shop</h1>
+
+    <table>
+        <thead>
+           <tr>
+            <th>Item</th>
+            <th>Rate</th>
+            <th>Qty</th>
+            <th>Amt Cal</th>
+            <th>Amount</th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" id="pen">
+                <label for="pen">Pen</label></td>
+                <td><input type="number" id="penRate" value="20" disabled></td>
+                <td><input type="number" id="penQty" value="0"></td>
+                <td><button type="button">Amt Cal</button></td>
+                <td class="amount">
+                    <span id="penAmount">0.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="pencil">
+                    <label for="pencil">Pencil</label></td>
+                    <td><input type="number" id="pencilRate" value="90" disabled></td>
+                    <td><input type="number" id="pencilQty" value="0"></td>
+                    <td><button type="button">Amt Cal</button></td>
+                    <td class="amount">
+                        <span id="pencilAmount">0.00</span>
+                    </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="eraser">
+                    <label for="eraser">Eraser</label></td>
+                    <td><input type="number" id="eraserRate" value="50" disabled></td>
+                    <td><input type="number" id="eraserQty" value="0"></td>
+                    <td><button type="button">Amt Cal</button></td>
+                    <td class="amount">
+                        <span id="eraserAmount">0.00</span>
+                    </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="notebook">
+                    <label for="Notebook">Notebook</label></td>
+                    <td><input type="number" id="notebookRate" value="100" disabled></td>
+                    <td><input type="number" id="notebookQty" value="0"></td>
+                    <td><button type="button">Amt Cal</button></td>
+                    <td class="amount">
+                        <span id="notebookAmount">0.00</span>
+                    </td>
+                    
+            </tr>
+            <tr>
+                <td colspan="4" id="total">
+                  <div class="button1">  
+                    <button type="button1" style="float: right;">Total</button></td>
+                <td class="amount"><span id="grandTotal">0.00</span></td>
+                
+            </tr>
+        </div>
+        </tbody>
+    </table>
+
+    <script>
+        function calculateAmount(item) {
+            var rate = parseFloat(document.getElementById(item + "Rate").value) || 0;
+            var qty = parseInt(document.getElementById(item + "Qty").value) || 0;
+            var amount = rate * qty;
+            document.getElementById(item + "Amount").textContent = amount.toFixed(2);
+            return amount;
+        }
+        function calculategrandTotal () {
+            var grandTotal = 0;
+            grandTotal += calculateAmount("pen");
+            grandTotal += calculateAmount("pencil");
+            grandTotal += calculateAmount("eraser");
+            grandTotal += calculateAmount("notebook");
+            document.getElementById("grandTotal").textContent = grandTotal.toFixed(2);
+        }
+
+        var items = ["pen","pencil","eraser","notebook"];
+        items.forEach(function(item) {
+            document.getElementById(item + "Rate").addEventListener("input", calculategrandTotal);
+            document.getElementById(item + "Qty").addEventListener("input", calculategrandTotal);
+            document.getElementById(item).addEventListener("change",calculategrandTotal);
+        });
+
+        calculategrandTotal();
+    </script>
+
+</body>
+</html>
+
