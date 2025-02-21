@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Red Ball Pizza - Customer Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="text-center">
+            <img src="logo.png" alt="Red Ball Pizza Logo" class="mb-3">
+            <h2>Customer Survey</h2>
+            <p>Thank you for taking our customer survey. Your response helps Red Ball Pizza maintain its top-rated status!</p>
+        </div>
+
+        <form>
+            <div class="row">
+                <!-- Customer Information -->
+                <div class="col-md-6">
+                    <h4 class="section-title">Customer Information</h4>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail *</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Where did you hear about us?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="internet">
+                            <label class="form-check-label" for="internet">Internet</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="newspaper">
+                            <label class="form-check-label" for="newspaper">Newspaper</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="favoriteDish" class="form-label">Favorite Red Ball Dish</label>
+                        <input type="text" class="form-control" id="favoriteDish">
+                    </div>
+                </div>
+
+                <!-- Share Your Experience -->
+                <div class="col-md-6">
+                    <h4 class="section-title">Share Your Experience</h4>
+                    <div class="mb-3">
+                        <label for="visitDate" class="form-label">Date of Visit</label>
+                        <input type="date" class="form-control" id="visitDate">
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderType" class="form-label">Order Type</label>
+                        <select class="form-select" id="orderType">
+                            <option>Dine in</option>
+                            <option>Takeaway</option>
+                            <option>Delivery</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Was your service friendly?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="serviceFriendly" id="serviceYes">
+                            <label class="form-check-label" for="serviceYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="serviceFriendly" id="serviceNo">
+                            <label class="form-check-label" for="serviceNo">No</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="serviceRating" class="form-label">Rate the overall service (0 to 10)</label>
+                        <input type="range" class="form-range" min="0" max="10" id="serviceRating">
+                    </div>
+                    <div class="mb-3">
+                        <label for="foodRating" class="form-label">Rate the food quality (0 to 10)</label>
+                        <input type="range" class="form-range" min="0" max="10" id="foodRating">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit My Survey</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+
+        <footer class="text-center mt-4">
+            <p>Red Ball Pizza • 811 Beach Drive • Ormond Beach, FL 32175 • (386) 555 - 7499</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
