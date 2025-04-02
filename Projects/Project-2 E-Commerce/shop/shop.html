@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Unique Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="men's-watch.html">
+    
+    <style>
+        .product-section {
+            margin-bottom: 30px;
+        }
+
+        .product-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #555;
+        }
+
+        .product-card .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .product-card .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+
+        <div class="product-section">
+            <h2>Men's Collection</h2>
+            <div class="row">
+                <div class="col-md-4 product-card">
+                   <a href="men's-watch.html"><img src="images/Watch1.png" alt="Men's Watch"> </a>
+                    <h3>Men's Watch</h3>
+                    <p>Classic men's wristwatch with stainless steel band.</p>
+                    <p>$249.99</p>
+                    <!-- <button class="btn btn-primary add-to-cart" data-name="Men's Watch" data-price="249.99" data-image="mens-watch.jpg">Add to Cart</button> -->
+                </div>
+                <div class="col-md-4 product-card">
+                    <a href="men's-watch.html"><img src="images/Watch1.png" alt="Men's Shirt"></a>
+                    <h3>Men's Shirt</h3>
+                    <p>Stylish casual shirt made from premium cotton.</p>
+                    <p>$49.99</p>
+                    <!-- <button class="btn btn-primary add-to-cart" data-name="Men's Shirt" data-price="49.99" data-image="mens-shirt.jpg">Add to Cart</button> -->
+                </div>
+                <div class="col-md-4 product-card">
+                    <a href="men's-shoes.html"><img src="images/Watch1.png" alt="Men's Shoes"></a>
+                    <h3>Men's Shoes</h3>
+                    <p>Comfortable and durable leather shoes.</p>
+                    <p>$89.99</p>
+                    <!-- <button class="btn btn-primary add-to-cart" data-name="Men's Shoes" data-price="89.99" data-image="mens-shoes.jpg">Add to Cart</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Women's Collection</h2>
+            <div class="row">
+                <div class="col-md-4 product-card">
+                    <img src="womens-dress.jpg" alt="Women's Dress">
+                    <h3>Women's Dress</h3>
+                    <p>Elegant floral dress for special occasions.</p>
+                    <p>$129.99</p>
+                    <button class="btn btn-primary add-to-cart" data-name="Women's Dress" data-price="129.99" data-image="womens-dress.jpg">Add to Cart</button>
+                </div>
+                <div class="col-md-4 product-card">
+                    <img src="womens-handbag.jpg" alt="Women's Handbag">
+                    <h3>Women's Handbag</h3>
+                    <p>Stylish leather handbag with multiple compartments.</p>
+                    <p>$79.99</p>
+                    <button class="btn btn-primary add-to-cart" data-name="Women's Handbag" data-price="79.99" data-image="womens-handbag.jpg">Add to Cart</button>
+                </div>
+                <div class="col-md-4 product-card">
+                    <img src="womens-earrings.jpg" alt="Women's Earrings">
+                    <h3>Women's Earrings</h3>
+                    <p>Elegant silver earrings with sparkling crystals.</p>
+                    <p>$39.99</p>
+                    <button class="btn btn-primary add-to-cart" data-name="Women's Earrings" data-price="39.99" data-image="womens-earrings.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Kid's Collection</h2>
+            <div class="row">
+                <div class="col-md-4 product-card">
+                    <img src="images/kindpng_3871969.png" alt="Kid's Toy">
+                    <h3>Kid's Toy</h3>
+                    <p>Interactive educational toy for children.</p>
+                    <p>$29.99</p>
+                    <button class="btn btn-primary add-to-cart" data-name="Kid's Toy" data-price="29.99" data-image="kids-toy.jpg">Add to Cart</button>
+                </div>
+                <div class="col-md-4 product-card">
+                    <img src="kids-clothes.jpg" alt="Kid's Clothes">
+                    <h3>Kid's Clothes</h3>
+                    <p>Comfortable and colorful children's clothing set.</p>
+                    <p>$34.99</p>
+                    <button class="btn btn-primary add-to-cart" data-name="Kid's Clothes" data-price="34.99" data-image="kids-clothes.jpg">Add to Cart</button>
+                </div>
+                <div class="col-md-4 product-card">
+                    <img src="kids-shoes.jpg" alt="Kid's Shoes">
+                    <h3>Kid's Shoes</h3>
+                    <p>Lightweight and durable sports shoes for kids.</p>
+                    <p>$44.99</p>
+                    <button class="btn btn-primary add-to-cart" data-name="Kid's Shoes" data-price="44.99" data-image="kids-shoes.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.add-to-cart').click(function() {
+                let name = $(this).data('name');
+                let price = $(this).data('price');
+                let image = $(this).data('image');
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name: name, price: price, image: image, quantity: 1 });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Item added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfortable Headphones - Unique Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .product-detail-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .headphone-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .headphone-item {
+            width: 48%; /* Adjust for desired number of columns */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .headphone-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .headphone-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .headphone-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .headphone-item p {
+            color: #555;
+        }
+
+        .headphone-item .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .headphone-item .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .headphone-item {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Unique Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="product-detail-container">
+        <h2>Comfortable Headphones</h2>
+        <p>Experience immersive sound with these comfortable headphones. Features include noise-canceling technology, Bluetooth 5.0 connectivity, and soft ear cushions for extended wear.</p>
+
+        <div class="headphone-section">
+            <div class="headphone-item">
+                <img src="images/headphone1.jpg" alt="Over-Ear Headphones">
+                <h3>Over-Ear Headphones</h3>
+                <p>Premium over-ear headphones with deep bass and crystal-clear sound.</p>
+                <p>$179.99</p>
+                <button class="btn btn-primary add-to-cart" data-name="Over-Ear Headphones" data-price="179.99" data-image="images/headphone1.jpg">Add to Cart</button>
+            </div>
+            <div class="headphone-item">
+                <img src="images/headphone2.jpg" alt="Wireless Earbuds">
+                <h3>Wireless Earbuds</h3>
+                <p>Compact and lightweight wireless earbuds with long battery life.</p>
+                <p>$99.99</p>
+                <button class="btn btn-primary add-to-cart" data-name="Wireless Earbuds" data-price="99.99" data-image="images/headphone2.jpg">Add to Cart</button>
+            </div>
+            <div class="headphone-item">
+                <img src="images/headphone3.jpg" alt="Sports Headphones">
+                <h3>Sports Headphones</h3>
+                <p>Sweat-resistant sports headphones with secure fit for active lifestyles.</p>
+                <p>$69.99</p>
+                <button class="btn btn-primary add-to-cart" data-name="Sports Headphones" data-price="69.99" data-image="images/headphone3.jpg">Add to Cart</button>
+            </div>
+            <div class="headphone-item">
+                <img src="images/headphone4.jpg" alt="Noise-Canceling Headphones">
+                <h3>Noise-Canceling Headphones</h3>
+                <p>Advanced noise-canceling headphones for immersive audio experience.</p>
+                <p>$249.99</p>
+                <button class="btn btn-primary add-to-cart" data-name="Noise-Canceling Headphones" data-price="249.99" data-image="images/headphone4.jpg">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.add-to-cart').click(function() {
+                let name = $(this).data('name');
+                let price = $(this).data('price');
+                let image = $(this).data('image');
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name: name, price: price, image: image, quantity: 1 });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Item added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>

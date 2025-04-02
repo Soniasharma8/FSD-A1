@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        const fruits = [
+            { name: "apple", qty: 500 },
+            { name: "banana", qty: 200 },
+            { name: "orange", qty: 150 },
+        ];
+
+        function myfun(fruit) { //Pass the whole fruit object.
+            return fruit.qty >= 200 ? "ok" : "low";
+        }
+
+        const groupedFruits = fruits.reduce((groups, fruit) => {
+            const status = myfun(fruit);
+            if (!groups[status]) {
+                groups[status] = [];
+            }
+            groups[status].push(fruit);
+            return groups;
+        }, {});
+
+        let txt = "Products with ok status: ";
+        if (groupedFruits.ok) {
+            groupedFruits.ok.forEach(fruit => {
+                txt += "name: " + fruit.name + ", qty: " + fruit.qty + "; ";
+            });
+        }
+        document.getElementById("output").textContent = txt;
+    </script>
+</body>
+</html>

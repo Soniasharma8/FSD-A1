@@ -1,0 +1,45 @@
+/* style.css */
+body {
+    background: linear-gradient(135deg, #ff6e7f, #bfe9ff, #FFFACD , #90caf9);
+   
+    /* animation: gradientAnimation 15s ease infinite; */
+     color: #0b0b0b;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+/* .img {
+    height: 20px;
+    width: 20px;
+    
+    
+} */
+
+.navbar {
+    /* margin-right: 100px; */
+    background-color:aqua;
+    align-items: center;
+    justify-content: ;
+}
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#searchForm {
+    width: 300px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+}

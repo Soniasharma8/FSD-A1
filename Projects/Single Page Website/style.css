@@ -1,0 +1,116 @@
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display:flexbox;
+    justify-content: center;
+    align-items:flex-start;
+    min-height: 50vh;
+    margin: 10px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: rgb(230, 167, 167);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1430px; /* Adjust as needed */
+    display:flexbox;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+}
+
+.edit-product {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+}
+
+.buy-product {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+}
+
+#cart {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+label {
+    margin-right: 5px;
+    width: 100px;
+    text-align: left; /* Aligned to the left as in the image */
+}
+
+input, button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#cart {
+    width: 100%;
+    border-collapse:collapse;
+}
+
+#cart th, #cart td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+    background-color:#ccc;
+}
+
+#cart th {
+    background-color: #f2f2f2;
+}
+
+.buy-product .form-group:nth-child(5) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buy-product .form-group:nth-child(5) label {
+    width: auto;
+    text-align: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+.buy-product .form-group:nth-child(5) input {
+    margin-bottom: 3px;
+}
+
+.buy-product .form-group:last-child {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.buy-product .form-group:last-child label {
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.edit-product .form-group:nth-child(4) {
+    display: flex;
+    justify-content: flex-start;
+}

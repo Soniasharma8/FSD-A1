@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Hues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/logo.png">
+    <style>
+        .jumbotron {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/i1.png'); /* Replace with your image */
+            background-size:cover;
+            color: white;
+            text-align: center;
+            padding: 150px;
+            margin-bottom: px;
+        }
+
+        .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #555;
+        }
+
+        .product-card .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .product-card .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+.img {
+    margin-left: 100px;
+}
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" >
+           <div class="img">
+            <img src="images/logo.png" alt="" width="100px" height="100px"></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop/shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" >Search</button> 
+              </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Mystic Hues</h1>
+        <p class="lead">Discover amazing products with unique styles.</p>
+        <a class="btn btn-primary btn-lg" href="shop.html" role="button">Shop Now</a>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4 product-card">
+                <a href="featuredproducts/stylishwatch.html"><img src="images/Watch1.png" alt="Watches"></a>
+                <h3>Stylish Watch</h3>
+                <p>A modern watch with a sleek design. Features include water resistance, chronograph, and a durable stainless steel band.</p>
+            </div>
+
+            <div class="col-md-4 product-card">
+             <a href="featuredproducts/headphone.html"><img src="images/Headphone.png" alt="Comfortable Headphones"> </a> 
+                <h3>Comfortable Headphones</h3>
+                <p>High-quality headphones for immersive sound. Noise-canceling technology, Bluetooth 5.0, and soft ear cushions for extended comfort.</p>
+            </div>
+
+            <div class="col-md-4 product-card">
+             <a href="featuredproducts/backpack.html"><img src="images/Backpack.png" alt="Elegant Backpack"></a>  
+                <h3>Elegant Backpack</h3>
+                <p>A stylish and practical backpack for everyday use. Made from durable, water-resistant material with multiple compartments and padded straps.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Best Deals On Smartphones</h2>
+        <div class="row">
+            <div class="col-md-4 product-card">
+               <a href="shop.html"><img src="images/Oppo1.png" alt="Smart Phone"> </a>
+                <h3>OPPO Reno13 Pro 5G</h3>
+                <h6>Exchange Bonus up to ₹3,000</h6>
+                <h6>₹49999</h6>
+              
+            </div>
+            <div class="col-md-4 product-card">
+              <a href="featuredproducts/vivo1.html"><img src="images/oppo2.png" alt="Comfortable Headphones"></a> 
+                <h3>OPPO Find X8 Pro</h3>
+                <h6>NCEMI up to 24 Months & Exchange Bonus up to ₹8,000</h6>
+               <h6>₹99999</h6>
+               
+            </div>
+            <div class="col-md-4 product-card">
+                <img src="images/oppo4.png" alt="Elegant Backpack">
+                <h3>OPPO Reno12 5G</h3>
+                <h6>Bank offer 10% off</h6>
+                <!-- <p>$79.99</p>
+                <button class="btn btn-primary add-to-cart" data-name="Elegant Backpack" data-price="79.99" data-image="product3.jpg">Add to Cart</button> -->
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.add-to-cart').click(function() {
+                let name = $(this).data('name');
+                let price = $(this).data('price');
+                let image = $(this).data('image');
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name: name, price: price, image: image, quantity: 1 });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Item added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>

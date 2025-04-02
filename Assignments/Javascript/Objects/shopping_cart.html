@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <div id="output"></div>
+
+  <script>
+    const ShoppingCart = {
+      addItem: function(itemName, price, quantity) {
+        if (this[itemName]) {
+          this[itemName].quantity += quantity;
+        } else {
+          this[itemName] = {
+            price: price,
+            quantity: quantity
+          };
+        }
+      },
+
+      getTotal: function() {
+        let total = 0;
+        for (let item in this) {
+          if (this.hasOwnProperty(item) && typeof this[item] === 'object' && this[item].price !== undefined) {
+            total += this[item].price * this[item].quantity;
+          }
+        }
+        return total;
+      },
+
+      removeItem: function(itemName) {
+        delete this[itemName];
+      },
+
+      getItemNames: function() {
+        let itemNames = [];
+        for (let item in this) {
+          if (this.hasOwnProperty(item) && typeof this[item] === 'object' && this[item].price !== undefined) {
+            itemNames.push(item);
+          }
+        }
+        return itemNames;
+      }
+    };
+
+    // Demonstrate usage:
+    ShoppingCart.addItem("Laptop", 1200, 1);
+    ShoppingCart.addItem("Mouse", 25, 2);
+    ShoppingCart.addItem("Keyboard", 50, 1);
+    ShoppingCart.addItem("Laptop", 1200, 1);
+
+    let totalPriceBefore = ShoppingCart.getTotal();
+    ShoppingCart.removeItem("Mouse");
+    let totalPriceAfter = ShoppingCart.getTotal();
+    let itemsLeft = ShoppingCart.getItemNames();
+
+    // Display the results in the HTML:
+    document.getElementById("output").innerHTML = `
+      <p>Total price before removal: $${totalPriceBefore}</p>
+      <p>Total price after removal: $${totalPriceAfter}</p>
+      <p>Items left: ${itemsLeft.join(", ")}</p>
+    `;
+
+  </script>
+</body>
+</html>
